@@ -1,9 +1,10 @@
-Full stack image uploading app.
+
+Front end for Mug-Bucket, an image uploading app.
 
 Built with:
 
 React,
 TypeScript,
-NestJs
+Styled Components
 
 WIP
