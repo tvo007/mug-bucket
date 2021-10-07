@@ -1,6 +1,9 @@
 import axios from "axios";
+import { ImageReferenceType } from "./types";
 
-const API_URL = "http://localhost:3001/api";
+export const API_URL = process.env.REACT_APP_API_URL;
+
+export const SPACES_URL = process.env.REACT_APP_SPACES_URL;
 
 export const postUploadImage = (data: FormData) =>
   axios.post(`${API_URL}/image/create`, data, {
@@ -12,6 +15,15 @@ export const postUploadImage = (data: FormData) =>
 
 //send image from fe to api
 
-export const getUploadedImage = (key: string) => {
-  return axios.get(`${API_URL}/image/${key}`);
+export const getProtectedImage = (imageId: string, password: string) => {
+  return axios.post(
+    `${API_URL}/image/${imageId}`,
+    {
+      password,
+    },
+    { responseType: "blob" }
+  );
 };
+
+export const getImageReference = (imageId: string) =>
+  axios.get<ImageReferenceType>(`${API_URL}/image/${imageId}/reference`);

@@ -44,7 +44,7 @@ export const useImageUpload = () => {
   const onDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.stopPropagation();
     e.preventDefault();
-    setImage((prevState) => ({ ...prevState, hover: false }));
+    setImage((prevState) => ({ ...prevState, hover: true }));
   };
 
   const onDragLeave = (e: React.DragEvent<HTMLDivElement>) => {

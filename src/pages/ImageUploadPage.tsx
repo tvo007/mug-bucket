@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import { BarLoader } from "react-spinners";
 import { ImageOptions } from "../components/ImageOptions";
 import { ImagePreview } from "../components/ImagePreview";
-import { ImageUpload } from "../components/ImageUpload";
+// import { ImageUpload } from "../components/ImageUpload";
 import { Spinner } from "../components/Spinner";
 import {
   Button,
@@ -28,6 +28,8 @@ export const ImageUploadPage = () => {
   const [loading, setLoading] = useState(false);
   const [imageOptions, setImageOptions] =
     useState<ImageOptionsType>(defaultImageOptions);
+
+  const { isNsfw, isProtected, password } = imageOptions;
 
   const formRef = useRef<HTMLFormElement>(null);
   const history = useHistory();
@@ -88,9 +90,11 @@ export const ImageUploadPage = () => {
         const data = new FormData();
 
         data.append("file", file);
-        data.append("isNsfw", `${imageOptions.isNsfw}`);
-        data.append("isProtected", `${imageOptions.isProtected}`);
-        data.append("password", `${imageOptions.password}`);
+        data.append("isNsfw", `${isNsfw}`);
+        data.append("isProtected", `${isProtected}`);
+        data.append("password", `${password}`);
+        localStorage.setItem("showImageResult", JSON.stringify(true));
+        localStorage.setItem("imagePassword", password);
 
         const { data: key } = await postUploadImage(data);
         history.push(`/img/${key}`);
