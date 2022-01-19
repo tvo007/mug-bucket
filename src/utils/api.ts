@@ -11,7 +11,7 @@ export const postUploadImage = (data: FormData) =>
   axios.post(`${API_URL}/image/create`, data, {
     headers: {
       "Content-Type": "multipart/form-data",
-      //   "Access-Control-Allow-Origin": true,
+        "Access-Control-Allow-Origin": true,
     },
   });
 
