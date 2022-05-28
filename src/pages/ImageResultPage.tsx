@@ -135,7 +135,7 @@ export const ImageResultPage = () => {
         <img src={source} alt="img" width={800} />
       )} */}
 
-      <img src={source} alt="img" width={800} />
+      {source && <img src={source} alt="img" width={800} />}
     </Page>
   );
 
