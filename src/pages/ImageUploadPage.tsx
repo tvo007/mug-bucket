@@ -149,12 +149,13 @@ export const ImageUploadPage = () => {
           </form>
           {source && <ImagePreview source={source} reset={reset} />}
         </ImageUploadContainer>
-        {file && (
+        {/* {file && (
           <ImageOptions
             imageOptions={imageOptions}
             setImageOptions={setImageOptions}
           />
-        )}
+        )} */}
+        {/**disabled temp */}
         <Button
           style={{ margin: `10px 0` }}
           onClick={uploadImage}

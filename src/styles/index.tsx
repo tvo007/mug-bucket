@@ -9,12 +9,6 @@ export const Container = styled.div`
   @media (min-width: 320px) {
     width: 400px;
   }
-  @media (min-width: 640px) {
-    width: 400px;
-  }
-  @media (min-width: 768px) {
-    width: 400px;
-  }
   @media (min-width: 1024px) {
     width: 800px;
   }
@@ -34,8 +28,17 @@ export const ImageUploadContainer = styled.div<ImageUploadContainerProps>`
     `}
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  @media (min-width: 320px) {
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) {
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 // export type PageProps = {
@@ -55,6 +58,14 @@ export type ImagePreviewProps = {
 };
 
 export const ImagePreviewStyle = styled.div<ImagePreviewProps>`
+  @media (min-width: 320px) {
+    margin: 10px 125px;
+  }
+  @media (min-width: 1024px) {
+    margin: 10px 0;
+  }
+
+ 
   border-radius: 10px;
   width: 175px;
   height: 125px;

@@ -41,7 +41,6 @@ export const ImagePreview = ({ source, reset }: ImagePreviewProps) => {
       <div style={{ position: "relative" }}>
         <ImagePreviewStyle
           url={source}
-          style={{ margin: "10px 0" }}
           onClick={() => setVisible(true)}
           // onKeyDown={}
         />
