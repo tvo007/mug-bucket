@@ -21,6 +21,7 @@ import { postUploadImage } from "../utils/api";
 import { defaultImageOptions } from "../utils/constants";
 import { useImageUpload } from "../utils/hooks";
 import { ImageOptionsType } from "../utils/types";
+import mug from "../images/mug-and-camera.jpg";
 
 export const ImageUploadPage = () => {
   const { image, setImage, showBorder, handlers } = useImageUpload();
@@ -123,6 +124,7 @@ export const ImageUploadPage = () => {
       justifyContent="center"
       flex
       flexDirection="column"
+      url={mug}
     >
       <OpacityLayer />
       <Container>

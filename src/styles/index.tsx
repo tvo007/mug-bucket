@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { fadeIn } from "./keyframes";
-import mug from "../images/mug-and-camera.jpg";
 
 export type ImageUploadContainerProps = {
   showBorder?: boolean;
@@ -95,13 +94,16 @@ export type PageProps = Partial<{
   justifyContent: string;
   flexGrow: string;
   flexDirection: string;
+  url: string;
 }>;
 
 //Partial type makes all props optional
 
 export const Page = styled.div<PageProps>`
   z-index: 1;
-  background: url(${mug}) no-repeat center center fixed;
+  ${({ url }) => css`
+    background: url(${url}) no-repeat center center fixed;
+  `}
   background-size: cover;
   overflow: hidden;
   height: 100%;
