@@ -101,16 +101,17 @@ export const ImageResultPage = () => {
       flex
       flexDirection="column"
     >
-      {!reveal ? (
-        <>
-          <div style={{ position: "relative" }}>
+      {/* {!reveal ? (
+        <> */}
+      {/**blur effects */}
+      {/* <div style={{ position: "relative" }}>
             <img
               src={source}
               alt="img"
               width={800}
               style={{ filter: "blur(10px)" }}
             />
-            {/* <div
+            <div
               style={{
                 position: "absolute",
                 top: 0,
@@ -127,12 +128,14 @@ export const ImageResultPage = () => {
               }}
             >
               Click to Reveal
-            </div> */}
-          </div>
-        </>
+            </div>
+          </div> */}
+      {/* </>
       ) : (
         <img src={source} alt="img" width={800} />
-      )}
+      )} */}
+
+      <img src={source} alt="img" width={800} />
     </Page>
   );
 
