@@ -5,9 +5,24 @@ export type ImageUploadContainerProps = {
   showBorder?: boolean;
 };
 
+export const Container = styled.div`
+  @media (min-width: 320px) {
+    width: 400px;
+  }
+  @media (min-width: 640px) {
+    width: 400px;
+  }
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+  @media (min-width: 1024px) {
+    width: 800px;
+  }
+`;
+
 export const ImageUploadContainer = styled.div<ImageUploadContainerProps>`
+  width: 100%;
   border-radius: 10px;
-  width: 800px;
   background-color: #303030;
   box-sizing: border-box;
   padding: 50px;
@@ -30,10 +45,6 @@ export const ImageUploadContainer = styled.div<ImageUploadContainerProps>`
 //     flexGrow?: string;
 //     flexDirection?: string;
 // }
-
-export const Container = styled.div`
-  width: 800px;
-`;
 
 export const ImagePreviewContainer = styled.img`
   width: 150px;
