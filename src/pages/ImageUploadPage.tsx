@@ -13,6 +13,7 @@ import {
   Flex,
   ImageUploadContainer,
   Label,
+  OpacityLayer,
   Page,
   Text,
 } from "../styles";
@@ -123,6 +124,7 @@ export const ImageUploadPage = () => {
       flex
       flexDirection="column"
     >
+      <OpacityLayer />
       <Container>
         {loading && <Spinner children={<BarLoader color="#fff" />} />}
         <ImageUploadContainer

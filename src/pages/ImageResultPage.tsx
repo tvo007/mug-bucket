@@ -110,7 +110,7 @@ export const ImageResultPage = () => {
               width={800}
               style={{ filter: "blur(10px)" }}
             />
-            <div
+            {/* <div
               style={{
                 position: "absolute",
                 top: 0,
@@ -127,7 +127,7 @@ export const ImageResultPage = () => {
               }}
             >
               Click to Reveal
-            </div>
+            </div> */}
           </div>
         </>
       ) : (

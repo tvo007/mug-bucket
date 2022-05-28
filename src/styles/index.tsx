@@ -1,11 +1,13 @@
 import styled, { css } from "styled-components";
 import { fadeIn } from "./keyframes";
+import mug from "../images/mug-and-camera.jpg";
 
 export type ImageUploadContainerProps = {
   showBorder?: boolean;
 };
 
 export const Container = styled.div`
+  z-index: 10;
   @media (min-width: 320px) {
     width: 400px;
   }
@@ -65,7 +67,6 @@ export const ImagePreviewStyle = styled.div<ImagePreviewProps>`
     margin: 10px 0;
   }
 
- 
   border-radius: 10px;
   width: 175px;
   height: 125px;
@@ -99,6 +100,10 @@ export type PageProps = Partial<{
 //Partial type makes all props optional
 
 export const Page = styled.div<PageProps>`
+  z-index: 1;
+  background: url(${mug}) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   ${({ flex }) =>
@@ -109,6 +114,15 @@ export const Page = styled.div<PageProps>`
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   flex-direction: ${({ flexDirection }) => flexDirection};
+`;
+
+export const OpacityLayer = styled.div`
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: black;
+  z-index: 2;
 `;
 
 //reusable page prop to flexibly style a page
