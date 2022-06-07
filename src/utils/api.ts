@@ -5,6 +5,8 @@ export const API_URL = process.env.REACT_APP_API_URL;
 
 export const SPACES_URL = process.env.REACT_APP_SPACES_URL;
 
+export const MUG = process.env.REACT_APP_CLOUDINARY_URL
+
 //changes
 
 export const postUploadImage = (data: FormData) =>
