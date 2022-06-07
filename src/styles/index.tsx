@@ -5,6 +5,15 @@ export type ImageUploadContainerProps = {
   showBorder?: boolean;
 };
 
+export const Header = styled.header`
+  font-family: "Lobster";
+  font-size: 3rem;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
 export const Container = styled.div`
   z-index: 10;
   @media (min-width: 320px) {

@@ -123,7 +123,9 @@ export const ImageUpload = () => {
             accept="image/jpg, image/jpeg, image/png, image/gif"
             onChange={handleFileChange}
           />
+          
         </div>
+        
         {source && <ImagePreview source={source} reset={reset} />}
       </ImageUploadContainer>
 

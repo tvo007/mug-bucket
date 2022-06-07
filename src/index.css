@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "DM Sans";
+  font-family: "DM Sans", "Lobster", cursive;
   -webkit-font-smoothing: antialiased;
   background-color: #232323;
   color: rgb(241, 238, 238);
